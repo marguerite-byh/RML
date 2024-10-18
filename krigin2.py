@@ -67,8 +67,8 @@ def generate_aggregated_signal_with_noise(N, M, K, cluster_size_range, snr):
 # original_matrix = generate_aggregated_signal(N, M, K, cluster_size_range)
 N, M, K = 100, 100, 3
 cluster_size_range = (5, 25)
-SNR = 10  # dB
-sample_rate = 0.05
+SNR = 20  # dB
+sample_rate = 0.15
 x_matrices, aggregated_x = generate_aggregated_signal_with_noise(N, M, K, cluster_size_range, SNR)
 # 随机采样，设置空缺值为0
 sample_matrix = np.copy(aggregated_x)
