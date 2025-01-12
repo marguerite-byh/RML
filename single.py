@@ -16,7 +16,7 @@ def read_and_concat_matrices(folder_path, lines_to_read):
     matrices = []
     for file_name in os.listdir(folder_path):
         file_path = os.path.join(folder_path, file_name)
-        if os.path.isfile(file_path) and file_name.endswith('.txt'):
+        if os.path.isfile(file_path) and file_name.endswith('.TXT'):
             specific_lines = read_specific_lines(file_path, lines_to_read)
             # 将每行数据分割并转换为数字（示例中假设每行数据以空格分隔）
             #matrix = [list(map(float, line.split())) for line in specific_lines]
@@ -25,7 +25,7 @@ def read_and_concat_matrices(folder_path, lines_to_read):
     return matrice
 # 文件夹路径
 z=912 #频率信息
-folder_path = (f'G:\\11')#文件夹路径
+folder_path = (f'G:\\数据\\10.17-24\\9.30-22')#文件夹路径
 result_matrices=[]
 lines_to_read = [line for test in range(2) for line in range(test*2050+3, test*2050+2051)]# 要读取的行数列表前2048
 # lines_to_read = [line for test in range(1,2) for line in range(test*2050+3, test*2050+2051)]# 要读取的行数列表后2048

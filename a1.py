@@ -6,7 +6,7 @@ Signal_Sampled = np.loadtxt('Signal_Sampled.csv', delimiter=',')
 Measure_Coords = np.loadtxt('Measure_Coords.csv', delimiter=',')
 Signal_Noised_Vector = np.loadtxt('Signal_Noised_Vector.csv', delimiter=',')
 Sample_Location = np.loadtxt('Sample_Location.csv', delimiter=',')
-i=3
+i=4
 selected_data = Signal_Sampled[:, i]
 
 first_column = Signal_Noised_Vector[:, i]
@@ -70,7 +70,7 @@ plt.show()
 try:
     rmse = np.sqrt(np.mean((z - reshaped_array) ** 2))
     relative_error = np.linalg.norm(z - reshaped_array) / np.linalg.norm(reshaped_array)
-
+    plt.suptitle(f' Sample Rate=16%')
     # 打印结果
     plt.text(0.05, 0.95, f'RMSE: {rmse:.4f}\nRelative Error: {relative_error:.4f}',
              transform=plt.gcf().transFigure,
